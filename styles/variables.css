@@ -1,1 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --bg-color: #ffffff;
+  --accent-color: #000000;
+  --background-image-color: red;
+  --color-gradient-line: #d3d3d3;
+  --color-gradient-fill-up: #e7e7e7;
+  --color-gradient-fill-down: #1a1a1a;
+  --color-btn-hover: rgba(0, 0, 0, 0.6);
+}
+
