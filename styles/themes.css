@@ -8,30 +8,48 @@
 :root.theme-light {
   --bg-color: #ffffff;
   --accent-color: #000000;
-  --background-image-color: red;
+  --color-contour: #000000;
+  --color-sparks: #ff0000;
+  --color-core: #ffffff;
+  --color-main-body: #ffffff;
   --color-gradient-line: #d3d3d3;
   --color-gradient-fill-up: #e7e7e7;
   --color-gradient-fill-down: #1a1a1a;
   --color-btn-hover: rgba(0, 0, 0, 0.6);
+  --color-btn-mix-blend: var(--bg-color, #ffffff);
+  --bgc-btn-mix-blend: var(--bg-color, #ffffff);
 }
 
 :root.theme-dark {
   --bg-color: #000000;
   --accent-color: #00cc14;
+  --color-contour: #00cc14;
+  --color-sparks: #ff0000;
+  --color-core: #000000;
+  --color-main-body: #000000;
   --color-gradient-line: #000;
   --color-gradient-fill-up: #007f0c;
   --color-gradient-fill-down: #004306;
   --color-btn-hover: rgba(0, 204, 20, 0.6);
+  --color-btn-mix-blend: var(--bg-color, #000000);
+
+  --bgc-btn-mix-blend: var(--accent-color, #00cc14);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #ffffff;
     --accent-color: #000000;
+    --color-contour: #000000;
+    --color-sparks: #ff0000;
+    --color-core: #ffffff;
+    --color-main-body: #ffffff;
     --color-gradient-line: #d3d3d3;
     --color-gradient-fill-up: #e7e7e7;
     --color-gradient-fill-down: #1a1a1a;
     --color-btn-hover: rgba(0, 0, 0, 0.6);
+    --color-btn-mix-blend: var(--bg-color, #ffffff);
+    --bgc-btn-mix-blend: var(--bg-color, #ffffff);
   }
 }
 
@@ -39,10 +57,16 @@
   :root {
     --bg-color: #000000;
     --accent-color: #00cc14;
+    --color-contour: #00cc14;
+    --color-sparks: #ff0000;
+    --color-core: #000000;
+    --color-main-body: #000000;
     --color-gradient-line: #000;
     --color-gradient-fill-up: #007f0c;
     --color-gradient-fill-down: #004306;
     --color-btn-hover: rgba(0, 204, 20, 0.6);
+    --color-btn-mix-blend: var(--bg-color, #000000);
+    --bgc-btn-mix-blend: var(--accent-color, #00cc14);
   }
 }
 
