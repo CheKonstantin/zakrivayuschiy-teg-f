@@ -397,7 +397,7 @@ dialog::backdrop {
   font-family: 'PressStart2P-Regular', sans-serif;
   font-weight: 600;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1;
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
   mix-blend-mode: hard-light;
 }
