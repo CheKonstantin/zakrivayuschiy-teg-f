@@ -53,11 +53,14 @@
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header__title">
-        &lt;/HTML&gt; <span class="header__subtitle">закрывающий тег</span>
-      </h1>
+      <a
+        href="/"
+        class="header__logo"
+      >
+        &lt;/HTML&gt;
+      </a>
+      <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
-        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
             <button
@@ -109,11 +112,17 @@
 
                   <img
                     src="./images/img-1.jpg"
+                    loading="lazy"
                     alt="заснежиная вершина горы"
                     class="post__img"
                   />
                 </picture>
-                <div class="post__label">&lt;долгий путь к вершине&gt;</div>
+                <div
+                  class="post__label"
+                  aria-hidden="true"
+                >
+                  &lt;долгий путь к вершине&gt;
+                </div>
               </div>
               <div class="post__footer">
                 <p class="text">
@@ -196,7 +205,12 @@
                     class="post__img"
                   />
                 </picture>
-                <div class="post__label">&lt;баланс&gt;</div>
+                <div
+                  class="post__label"
+                  aria-hidden="true"
+                >
+                  &lt;баланс&gt;
+                </div>
               </div>
               <div class="post__footer">
                 <p class="text">
@@ -282,7 +296,12 @@
                     class="post__img"
                   />
                 </picture>
-                <div class="post__label">&lt;спокойствие&gt;</div>
+                <div
+                  class="post__label"
+                  aria-hidden="true"
+                >
+                  &lt;спокойствие&gt;
+                </div>
               </div>
               <div class="post__footer">
                 <p class="text">
@@ -365,7 +384,12 @@
                     class="post__img"
                   />
                 </picture>
-                <div class="post__label">&lt;идеала не существует&gt;</div>
+                <div
+                  class="post__label"
+                  aria-hidden="true"
+                >
+                  &lt;идеала не существует&gt;
+                </div>
               </div>
               <div class="post__footer">
                 <p class="text">
@@ -450,7 +474,12 @@
                     class="post__img"
                   />
                 </picture>
-                <div class="post__label">поддержка и мотивация</div>
+                <div
+                  class="post__label"
+                  aria-hidden="true"
+                >
+                  поддержка и мотивация
+                </div>
               </div>
               <div class="post__footer">
                 <p class="text">
@@ -539,7 +568,12 @@
                     class="post__img"
                   />
                 </picture>
-                <div class="post__label">&lt;включи воображение!&gt;</div>
+                <div
+                  class="post__label"
+                  aria-hidden="true"
+                >
+                  &lt;включи воображение!&gt;
+                </div>
               </div>
               <div class="post__footer">
                 <p class="text">
@@ -622,7 +656,12 @@
                     class="post__img"
                   />
                 </picture>
-                <div class="post__label">&lt;Поднимаются ноги&gt;</div>
+                <div
+                  class="post__label"
+                  aria-hidden="true"
+                >
+                  &lt;Поднимаются ноги&gt;
+                </div>
               </div>
               <div class="post__footer">
                 <p class="text">
@@ -707,7 +746,12 @@
                     class="post__img"
                   />
                 </picture>
-                <div class="post__label">&lt;придерживайся пути &gt;</div>
+                <div
+                  class="post__label"
+                  aria-hidden="true"
+                >
+                  &lt;придерживайся пути &gt;
+                </div>
               </div>
               <div class="post__footer">
                 <p class="text">
@@ -796,15 +840,15 @@
       id="dialog-id"
     >
       <svg
-        class="icon"
+        class="icon modal__icon"
         viewBox="0 0 40 40"
       >
         <use href="svg/floppy.svg#floppy"></use>
       </svg>
-      <div class="modal__title">
+      <p class="modal__title">
         Вставьте <br />
         дискету, чтобы продолжить
-      </div>
+      </p>
       <form
         method="dialog"
         class="modal__form"
@@ -812,9 +856,9 @@
         <button
           type="button"
           onclick="window['dialog-id'].close()"
-          class="button modal__btn"
+          class="button button_text-upper modal__btn"
         >
-          ОК
+          <span class="button__text">ОК</span>
         </button>
       </form>
     </dialog>
