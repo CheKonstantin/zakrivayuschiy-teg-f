@@ -10,6 +10,8 @@
   --color-gradient-fill-down: #1a1a1a;
   --color-btn-hover: rgba(0, 0, 0, 0.6);
   --color-btn-mix-blend: var(--bg-color, #ffffff);
+  --font-variable-weight: 700;
+  --fill-gardient-dur: 0.01%;
 }
 
 :root.theme-dark {
@@ -24,6 +26,8 @@
   --color-gradient-fill-down: #004306;
   --color-btn-hover: rgba(0, 204, 20, 0.6);
   --color-btn-mix-blend: var(--accent-color, #00cc14);
+  --font-variable-weight: 785;
+  --fill-gardient-dur: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +43,8 @@
     --color-gradient-fill-down: #004306;
     --color-btn-hover: rgba(0, 204, 20, 0.6);
     --color-btn-mix-blend: var(--accent-color, #00cc14);
+    --font-variable-weight: 785;
+    --fill-gardient-dur: 0;
   }
 }
 

@@ -51,6 +51,7 @@
 }
 
 .button:focus-visible {
+  outline: none;
   box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 
@@ -150,20 +151,27 @@ html:has(.modal[open]) {
   font-family: var(--font-Inter-Variable, 'Inter-Variable', sans-serif);
   background-color: var(--bg-color);
   background-image: repeating-linear-gradient(
-      90deg,
+      to bottom,
       var(--color-gradient-line, #d3d3d3),
-      transparent 2px
+      var(--color-gradient-line, #d3d3d3),
+      2px,
+      transparent 2px,
+      transparent 4px
     ),
     repeating-linear-gradient(
-      0deg,
+      to left,
       var(--color-gradient-line, #d3d3d3),
-      transparent 2px
+      var(--color-gradient-line, #d3d3d3),
+      2px,
+      transparent 2px,
+      transparent 4px
     ),
     repeating-linear-gradient(
       180deg,
-      var(--color-gradient-fill-up, #e7e7e7) 0.01%,
+      var(--color-gradient-fill-up, #e7e7e7) var(--fill-gardient-dur, 0.01%),
       var(--color-gradient-fill-down, #1a1a1a)
     );
+
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -260,25 +268,29 @@ html:has(.modal[open]) {
   }
 }
 
-.posts {
+.cards {
   color: var(--accent-color, #000000);
-  background-color: var(--bg-color, #ffffff);
 }
 
-.posts__list-item:not(:last-child) {
+.cards__list-item:not(:last-child) {
   margin-block-end: 50px;
 }
 
-.post {
+.card {
+  background-color: var(--bg-color, #ffffff);
   border: 2px solid currentColor;
 }
 
-.post__header {
+.card__icon-button:focus-visible {
+  outline: none;
+}
+
+.card__header {
   border-block-end: 2px solid currentColor;
   padding: 4px 10px;
 }
 
-.post__body {
+.card__body {
   position: relative;
   width: 100%;
   border-block-end: 2px solid currentColor;
@@ -286,12 +298,12 @@ html:has(.modal[open]) {
 }
 
 @supports (aspect-ratio: 1/1) {
-  .post__body {
+  .card__body {
     aspect-ratio: 1/1;
   }
 }
 
-.post__label {
+.card__label {
   position: absolute;
   top: clamp(1.5625rem, 1.4165rem + 0.6231vw, 1.6875rem);
   right: clamp(1.4375rem, 1.2933rem + 0.6154vw, 1.5625rem);
@@ -300,39 +312,40 @@ html:has(.modal[open]) {
   font-weight: 600;
   font-size: 14px;
   line-height: 1;
-  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  text-shadow: -1px 0 var(--bg-color, #ffffff), 0 1px var(--bg-color, #ffffff),
+    1px 0 var(--bg-color, #ffffff), 0 -1px var(--bg-color, #ffffff);
   mix-blend-mode: hard-light;
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
-  .post__label {
+  .card__label {
     text-shadow: none;
-    -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--bg-color, #ffffff);
+    text-stroke: 1px var(--bg-color, #ffffff);
   }
 }
 
-.post__img {
+.card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.post__title {
-  font-variation-settings: 'wght' 700;
+.card__title {
+  font-variation-settings: 'wght' var(--font-variable-weight, 700);
 }
 
-.post:not(.post__header) .text:not(:last-of-type) {
+.card:not(.card__header) .text:not(:last-of-type) {
   margin-block-end: 27px;
 }
 
-.post__footer {
+.card__footer {
   display: flex;
   flex-direction: column;
   padding: 25px;
 }
 
-.post__btn {
+.card__btn {
   width: auto;
   min-inline-size: 130px;
 }
@@ -348,8 +361,12 @@ html:has(.modal[open]) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 11px;
+  gap: 8px;
   min-block-size: 80px;
+}
+
+.footer__icon {
+  mix-blend-mode: difference;
 }
 
 @media (width > 375px) {

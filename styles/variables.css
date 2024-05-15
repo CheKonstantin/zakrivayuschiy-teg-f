@@ -12,5 +12,7 @@
   --color-btn-mix-blend: var(--bg-color, #ffffff);
   --font-Inter-Variable: 'Inter-Variable', sans-serif;
   --font-PressStart2P: 'PressStart2P-Regular', sans-serif;
+  --font-variable-weight: 700;
+  --fill-gardient-dur: 0.01%;
 }
 
