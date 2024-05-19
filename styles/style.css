@@ -50,8 +50,11 @@
   }
 }
 
-.button:focus-visible {
+.button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 
@@ -281,8 +284,12 @@ html:has(.modal[open]) {
   border: 2px solid currentColor;
 }
 
-.card__icon-button:focus-visible {
+.card__icon-button:focus {
   outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color, #000000);
 }
 
 .card__header {
@@ -305,23 +312,22 @@ html:has(.modal[open]) {
 
 .card__label {
   position: absolute;
+  z-index: 1;
   top: clamp(1.5625rem, 1.4165rem + 0.6231vw, 1.6875rem);
   right: clamp(1.4375rem, 1.2933rem + 0.6154vw, 1.5625rem);
   opacity: 0.5;
   font-family: var(--font-PressStart2P, 'PressStart2P-Regular', sans-serif);
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1;
   text-shadow: -1px 0 var(--bg-color, #ffffff), 0 1px var(--bg-color, #ffffff),
     1px 0 var(--bg-color, #ffffff), 0 -1px var(--bg-color, #ffffff);
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+@supports ((text-stroke: 1px var(--bg-color, #ffffff);
+) or ( -webkit-text-stroke: 1px var(--bg-color, #ffffff))) {
   .card__label {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--bg-color, #ffffff);
     text-stroke: 1px var(--bg-color, #ffffff);
+    -webkit-text-stroke: 1px var(--bg-color, #ffffff);
   }
 }
 
